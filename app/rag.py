@@ -40,7 +40,7 @@ Context:
 Question:
 {question}
 
-If the answer cannot be found in the context, say that you cannot find the answer in the document. Do not ever answer the questions that are not in context.
+If the answer cannot be found in the context, say that you cannot find the answer in the document.
 """
 
     response = chat_client.responses.create(
@@ -48,4 +48,4 @@ If the answer cannot be found in the context, say that you cannot find the answe
         input=prompt
     )
 
-    return response.output_text
+    return response.output_text, relevant_chunks

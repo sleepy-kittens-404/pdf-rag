@@ -134,13 +134,19 @@ else:
 
             with st.spinner("Searching document..."):
 
-                answer = answer_question(
+              answer, sources = answer_question(
                     question,
                     st.session_state.index,
                     st.session_state.chunks
                 )
 
             st.markdown(answer)
+            with st.expander("Sources"):
+                for source in sources:
+                    st.markdown(
+                        f"**Page {source['page_number']}**"
+                    )
+                    st.caption(source["text"][:300] + "...")
 
         st.session_state.messages.append({
             "role": "assistant",
