@@ -36,7 +36,6 @@ Answer
 * FAISS vector similarity search
 * LLM-powered answers
 * Streamlit chat interface
-
 ## Source Attribution
 
 Each response is accompanied by the document pages used as context.
