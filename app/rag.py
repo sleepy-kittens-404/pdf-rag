@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 from openai import OpenAI
-
+from app.config import API_KEY
 from app.embeddings import create_embedding
 from app.vector_store import search_index
 
@@ -10,7 +10,7 @@ from app.vector_store import search_index
 load_dotenv()
 
 chat_client = OpenAI(
-    api_key=os.getenv("API_KEY"),
+    api_key=API_KEY,
     base_url="https://api.groq.com/openai/v1",
 )
 

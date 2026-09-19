@@ -1,11 +1,11 @@
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
-
+from app.config import EMBEDDING_KEY
 load_dotenv()
 
 embedding_client = OpenAI(
-    api_key=os.getenv("EMBEDDING_KEY")
+    api_key=EMBEDDING_KEY
 )
 
 
