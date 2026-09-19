@@ -37,6 +37,14 @@ Answer
 * LLM-powered answers
 * Streamlit chat interface
 
+## Source Attribution
+
+Each response is accompanied by the document pages used as context.
+
+The system retrieves the most relevant chunks using FAISS, preserves their page metadata, and displays the corresponding pages and source excerpts alongside the generated answer.
+
+This makes the responses easier to verify against the original document.
+
 ## Tech Stack
 
 * Python
